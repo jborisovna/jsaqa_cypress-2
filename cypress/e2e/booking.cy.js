@@ -16,7 +16,7 @@ it('booking tickets', () => {
                 cy.get(`.buying-scheme__wrapper > :nth-child(${seat.row}) > :nth-child(${seat.seat})`).click();
             });
         });
-        // cy.contains(auth.ButtonBookingName).click();
-        // cy.contains(auth.BookingResult).should("be.visible");
+        cy.get('.acceptin-button').click();
+        cy.contains('Вы выбрали билеты:').should("be.visible");
     });
 })
